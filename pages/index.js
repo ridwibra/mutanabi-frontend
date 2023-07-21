@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import dynamic from "next/dynamic";
 const CurrentTime = dynamic(() => import("components/CurrentTime"), {
   ssr: false,
@@ -164,23 +166,17 @@ export default function Form() {
       <footer className="bg-gray-800 text-white py-6">
         <div className="container mx-auto px-6">
           <div className="flex justify-center items-center space-x-12">
-            <div className="flex items-center">
+            <a href="https://wa.me/233548336362" className="hover:underline">
               <FontAwesomeIcon icon={faWhatsapp} className="text-2xl mr-3" />
-              <a href="https://wa.me/233548336362" className="hover:underline">
-                +233548336362
-              </a>
-            </div>
-            <div className="flex items-center">
-              <FontAwesomeIcon icon={faTwitter} className="text-2xl mr-3" />
-              <a
-                href="https://twitter.com/RidwanIbraheem5"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                @RidwanIbraheem5
-              </a>
-            </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ridwan-ibraheem-3088bb1a4/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              <FontAwesomeIcon icon={faLinkedin} className="text-2xl mr-3" />
+            </a>
           </div>
           <hr className="my-6" />
           <div className="text-center">
@@ -188,7 +184,7 @@ export default function Form() {
           </div>
         </div>
       </footer>
-      ;
+      ; ; ;
     </>
   );
 }
